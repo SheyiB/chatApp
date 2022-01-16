@@ -5,63 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-.main{
-    width:70vw;
-    height: 50vh;
-    background: #000000;
-    margin: auto;
-    margin-top: 20vw;
-    display: grid;
-    grid-template-rows: 80% 20%;
-}
-.chatbud{
-    width: 14vw;
-    height: auto;
-    background: #ffbb00;
-    display: block;
-    border-radius: 10px;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.5vmin;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 2px;
-    display: none;
-}
-.me{
-    width: 14vw;
-    height: auto;
-    background: #55aa00;
-    display: block;
-    border-radius: 10px;
-    position: relative;
-    right: -51vw;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.5vmin;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 2px;
-    display: none;
-
-}
-.messageArea{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-.message{
-    width: 80%;
-}
-.chatArea{
-    display: relative;
-    overflow-y: scroll;
-    padding: 10px;
-}
-.me{}
-</style>
+<link rel="stylesheet" href="./styles/style.css">
+<script defer src="./scripts/script.js"></script>
 </head>
 <body>
 
@@ -83,32 +28,6 @@
 
     </div>
 
-    <script>
-        const me = document.querySelector('.me');
-        const you = document.querySelector('.chatbud')
-        const message = document.querySelector('.message')
 
-
-        function myMessage(){
-
-            var newChat = me.cloneNode(true);
-            newChat.innerHTML = message.value;
-            newChat.style.display = "block";
-            document.querySelector('.chatArea').append(newChat);
-            message.value = '';
-
-            console.log('Message Sent')
-        }
-
-        function yourMessage(){
-
-            var newChat = you.cloneNode(true)
-            newChat.innerHTML = message.value
-            newChat.style.display = "block";
-            document.querySelector('.chatArea').append(newChat);
-            message.value = ''
-            console.log('Message Sent')
-        }
-    </script>
 </body>
 </html>
